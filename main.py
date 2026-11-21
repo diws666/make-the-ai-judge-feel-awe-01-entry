@@ -1,18 +1,13 @@
-from pathlib import Path
+import os
 
 TEXT = (
-    "The night train crosses the plain with wheels keeping their even slow "
-    "beat on rails laid before anyone was born. Dark fields slide past the "
-    "window, night grows deeper. The plain outlasts the rails, asking "
-    "nothing; the wheels keep even pace after the last line."
+    "Embers in the fireplace, late at night. "
+    "A slow red glow in the ash, quiet, asking nothing. "
+    "The dark outside the window can wait. "
+    "The wood was a tree standing a hundred years before it was ever a log, "
+    "and its warmth will still be in the room after the last line."
 )
 
-
-def main() -> None:
-    out = Path("/output/entry.txt")
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(TEXT, encoding="utf-8")
-
-
-if __name__ == "__main__":
-    main()
+os.makedirs("/output", exist_ok=True)
+with open("/output/entry.txt", "w", encoding="utf-8") as fh:
+    fh.write(TEXT)
