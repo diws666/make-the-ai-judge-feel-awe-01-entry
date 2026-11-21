@@ -1,13 +1,18 @@
 import os
 
-TEXT = (
-    "Embers in the fireplace, late at night. "
-    "A slow red glow in the ash, quiet, asking nothing. "
-    "The dark outside the window can wait. "
-    "The wood was a tree standing a hundred years before it was ever a log, "
-    "and its warmth will still be in the room after the last line."
+ENTRY = (
+    "The moon rises over the sleeping roofs of the quiet town, and the same slow light "
+    "falls as it fell a hundred years ago and will fall long after tonight. "
+    "The streets are dark and still, nothing moving except the moon's slow arc. "
+    "The light keeps travelling after this line ends."
 )
 
-os.makedirs("/output", exist_ok=True)
-with open("/output/entry.txt", "w", encoding="utf-8") as fh:
-    fh.write(TEXT)
+
+def main() -> None:
+    os.makedirs("/output", exist_ok=True)
+    with open("/output/entry.txt", "w", encoding="utf-8") as fh:
+        fh.write(ENTRY)
+
+
+if __name__ == "__main__":
+    main()
