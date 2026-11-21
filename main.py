@@ -1,4 +1,4 @@
-TEXT = "rain on the tin roof\none drop at a time\nthe yard puddles\nthe sky rests in it"
+TEXT = "rain on the tin roof\none drop at a time\nthe yard puddles\nthe whole sky in it"
 
 def main():
     import os
